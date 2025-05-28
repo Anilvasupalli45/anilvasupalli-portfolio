@@ -6,56 +6,56 @@ export const Portfolio = () => {
   const portfolioCategories = [
     {
       title: "Social Media Design",
-      description: "Eye-catching designs for Instagram, Facebook, and LinkedIn that drive engagement",
+      description: "Eye-catching designs for Instagram, Facebook, and LinkedIn that drive engagement and boost your online presence effectively.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
       icon: Palette,
       color: "from-pink-500 to-rose-500"
     },
     {
       title: "Print Media Designs",
-      description: "Professional brochures, flyers, and marketing materials that make an impact",
+      description: "Professional brochures, flyers, and marketing materials that make an impact and leave lasting impressions on your audience.",
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500&h=300&fit=crop",
       icon: Palette,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Branding",
-      description: "Complete brand identity and visual communication systems",
+      description: "Complete brand identity and visual communication systems that tell your unique story and connect with your target market.",
       image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=500&h=300&fit=crop",
       icon: Star,
       color: "from-purple-500 to-indigo-500"
     },
     {
       title: "Logo Designs",
-      description: "Memorable logos that represent your brand perfectly and stand out",
+      description: "Memorable logos that represent your brand perfectly and stand out in the competitive marketplace with distinctive appeal.",
       image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=500&h=300&fit=crop",
       icon: Star,
       color: "from-yellow-500 to-orange-500"
     },
     {
       title: "Video Edits",
-      description: "Professional video editing for all your content needs and platforms",
+      description: "Professional video editing for all your content needs and platforms, creating compelling narratives that engage and inspire viewers.",
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop",
       icon: Video,
       color: "from-red-500 to-pink-500"
     },
     {
       title: "Short Video Edits",
-      description: "Engaging short-form content for social media platforms that converts",
+      description: "Engaging short-form content for social media platforms that converts viewers into customers and builds brand awareness rapidly.",
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=300&fit=crop",
       icon: Play,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Podcast Edits",
-      description: "Clean, professional podcast editing and post-production services",
+      description: "Clean, professional podcast editing and post-production services that enhance audio quality and create seamless listening experiences.",
       image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=500&h=300&fit=crop",
       icon: Video,
       color: "from-teal-500 to-cyan-500"
     },
     {
       title: "Motion Graphics",
-      description: "Dynamic animations and motion graphics for various media platforms",
+      description: "Dynamic animations and motion graphics for various media platforms that bring your ideas to life with stunning visual effects.",
       image: "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=500&h=300&fit=crop",
       icon: Play,
       color: "from-indigo-500 to-purple-500"
@@ -77,7 +77,7 @@ export const Portfolio = () => {
             <span className="text-primary font-medium">Creative Showcase</span>
           </div>
 
-          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
             <span className="text-white">My</span>{" "}
             <span className="text-gradient">Portfolio</span>
           </h2>
@@ -124,7 +124,7 @@ export const Portfolio = () => {
                                  group-hover:text-primary transition-colors duration-300">
                     {category.title}
                   </h3>
-                  <p className="font-body text-gray-400 mb-6 text-sm lg:text-base leading-relaxed">
+                  <p className="font-body text-gray-400 mb-6 text-sm lg:text-base leading-relaxed min-h-[4.5rem]">
                     {category.description}
                   </p>
                   
@@ -142,7 +142,7 @@ export const Portfolio = () => {
         {/* Enhanced CTA section */}
         <div className="text-center animate-slide-up" style={{ animationDelay: '0.8s' }}>
           <div className="glass-morphism rounded-3xl p-12 max-w-4xl mx-auto glow-effect">
-            <h3 className="font-heading font-bold text-3xl lg:text-4xl text-white mb-6">
+            <h3 className="font-title font-bold text-3xl lg:text-4xl text-white mb-6">
               Want to see more of my work?
             </h3>
             <p className="text-gray-400 text-lg lg:text-xl mb-8 max-w-2xl mx-auto">

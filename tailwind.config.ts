@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,7 +62,8 @@ export default {
 			fontFamily: {
 				sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
 				heading: ['Nunito', 'ui-sans-serif', 'system-ui'],
-				body: ['Quicksand', 'ui-sans-serif', 'system-ui']
+				body: ['Quicksand', 'ui-sans-serif', 'system-ui'],
+				title: ['Playfair Display', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
