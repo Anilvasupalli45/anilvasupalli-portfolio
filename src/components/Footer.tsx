@@ -1,5 +1,5 @@
 
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Heart, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -11,127 +11,182 @@ export const Footer = () => {
     }
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer id="contact" className="bg-dark border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <h3 className="font-heading font-bold text-2xl text-white mb-4">
+    <footer id="contact" className="bg-dark border-t border-gray-800 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-8xl mx-auto px-4 md:px-8 lg:px-16 xl:px-20 py-20 relative z-10">
+        {/* Main contact section */}
+        <div className="text-center mb-20 animate-slide-up">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-8">
+            <Send className="w-5 h-5 text-primary" />
+            <span className="text-primary font-medium">Get In Touch</span>
+          </div>
+
+          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+            <span className="text-white">Let's</span>{" "}
+            <span className="text-gradient">Connect</span>
+          </h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-8"></div>
+          <p className="font-body text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
+            Ready to bring your creative vision to life? Let's discuss your project and create something 
+            <span className="text-primary font-semibold"> extraordinary together</span>
+          </p>
+
+          {/* Quick contact cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+            <a
+              href="mailto:anil@example.com"
+              className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+                         glow-effect hover:shadow-primary/30"
+            >
+              <Mail className="w-8 h-8 text-primary mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
+              <h3 className="font-semibold text-white mb-2">Email Me</h3>
+              <p className="text-gray-400 text-sm">anil@example.com</p>
+            </a>
+            
+            <a
+              href="tel:+1234567890"
+              className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+                         glow-effect hover:shadow-green-500/30"
+            >
+              <Phone className="w-8 h-8 text-green-400 mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
+              <h3 className="font-semibold text-white mb-2">Call Me</h3>
+              <p className="text-gray-400 text-sm">+123 456 7890</p>
+            </a>
+            
+            <div className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+                            glow-effect hover:shadow-blue-500/30">
+              <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
+              <h3 className="font-semibold text-white mb-2">Location</h3>
+              <p className="text-gray-400 text-sm">Remote & Freelance</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          {/* Brand section */}
+          <div className="lg:col-span-1 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <h3 className="font-heading font-bold text-3xl text-white mb-6 text-gradient">
               Anil Vasupalli
             </h3>
-            <p className="font-body text-gray-400 mb-6">
+            <p className="font-body text-gray-400 mb-8 leading-relaxed">
               Creative professional specializing in graphic design and video editing.
-              Let's bring your vision to life.
+              Let's bring your vision to life with innovative and impactful designs.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/anilvasupalli"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center 
+                           hover:bg-blue-600 transition-all duration-500 hover:scale-110 
+                           hover:shadow-lg hover:shadow-blue-600/30 group"
               >
-                <span className="text-white font-bold">Li</span>
+                <span className="text-white font-bold text-sm group-hover:rotate-12 transition-transform duration-300">Li</span>
               </a>
               <a
                 href="https://www.behance.net/anilvasupalli"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center 
+                           hover:bg-primary transition-all duration-500 hover:scale-110 
+                           hover:shadow-lg hover:shadow-primary/30 group"
               >
-                <span className="text-white font-bold">Be</span>
+                <span className="text-white font-bold text-sm group-hover:rotate-12 transition-transform duration-300">Be</span>
               </a>
             </div>
           </div>
           
           {/* Navigation */}
-          <div>
-            <h4 className="font-heading font-semibold text-white text-lg mb-6">
+          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <h4 className="font-heading font-semibold text-white text-xl mb-8">
               Navigation
             </h4>
-            <ul className="space-y-3">
-              <li>
-                <button
-                  onClick={() => scrollToSection("home")}
-                  className="font-body text-gray-400 hover:text-primary transition-colors duration-300"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("skills")}
-                  className="font-body text-gray-400 hover:text-primary transition-colors duration-300"
-                >
-                  Skills
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("portfolio")}
-                  className="font-body text-gray-400 hover:text-primary transition-colors duration-300"
-                >
-                  Portfolio
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("testimonials")}
-                  className="font-body text-gray-400 hover:text-primary transition-colors duration-300"
-                >
-                  Testimonials
-                </button>
-              </li>
+            <ul className="space-y-4">
+              {['Home', 'Skills', 'Portfolio', 'Testimonials'].map((item) => (
+                <li key={item}>
+                  <button
+                    onClick={() => scrollToSection(item.toLowerCase())}
+                    className="font-body text-gray-400 hover:text-primary transition-all duration-300 
+                               text-left group flex items-center gap-2"
+                  >
+                    <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-300"></span>
+                    {item}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
           
-          {/* Contact */}
-          <div>
-            <h4 className="font-heading font-semibold text-white text-lg mb-6">
-              Contact Info
+          {/* Services */}
+          <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <h4 className="font-heading font-semibold text-white text-xl mb-8">
+              Services
             </h4>
-            <div className="space-y-4">
-              <a
-                href="mailto:anil@example.com"
-                className="flex items-center gap-3 font-body text-gray-400 hover:text-primary transition-colors duration-300"
-              >
-                <Mail className="w-5 h-5" />
-                anil@example.com
-              </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center gap-3 font-body text-gray-400 hover:text-primary transition-colors duration-300"
-              >
-                <Phone className="w-5 h-5" />
-                +123 456 7890
-              </a>
-            </div>
+            <ul className="space-y-4">
+              {['Graphic Design', 'Video Editing', 'Social Media Design', 'Branding', 'Motion Graphics'].map((service) => (
+                <li key={service}>
+                  <div className="font-body text-gray-400 group flex items-center gap-2">
+                    <span className="w-2 h-2 bg-primary/50 rounded-full group-hover:bg-primary 
+                                     transition-colors duration-300"></span>
+                    {service}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
           
           {/* Newsletter */}
-          <div>
-            <h4 className="font-heading font-semibold text-white text-lg mb-6">
+          <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <h4 className="font-heading font-semibold text-white text-xl mb-8">
               Stay Updated
             </h4>
-            <p className="font-body text-gray-400 text-sm mb-4">
-              Subscribe to get updates on new projects and creative insights.
+            <p className="font-body text-gray-400 text-sm mb-6 leading-relaxed">
+              Subscribe to get updates on new projects, creative insights, and exclusive design tips.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Input
                 placeholder="Enter your email"
-                className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary"
+                className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 
+                           focus:border-primary rounded-xl h-12 backdrop-blur-sm
+                           transition-all duration-300 focus:shadow-lg focus:shadow-primary/20"
               />
-              <Button className="w-full btn-primary">
+              <Button className="w-full btn-primary group h-12">
+                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 Subscribe
               </Button>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="font-body text-gray-500">
-            © 2024 Anil Vasupalli. All rights reserved.
+        {/* Bottom section */}
+        <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row 
+                        justify-between items-center animate-slide-up" style={{ animationDelay: '0.5s' }}>
+          <p className="font-body text-gray-500 mb-4 md:mb-0 flex items-center gap-2">
+            © {currentYear} Anil Vasupalli. Made with 
+            <Heart className="w-4 h-4 text-primary animate-pulse" />
+            All rights reserved.
           </p>
+          
+          <div className="flex items-center gap-6 text-sm text-gray-500">
+            <button className="hover:text-primary transition-colors duration-300">Privacy Policy</button>
+            <button className="hover:text-primary transition-colors duration-300">Terms of Service</button>
+            <a 
+              href="https://www.behance.net/anilvasupalli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors duration-300 flex items-center gap-1"
+            >
+              Portfolio <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
