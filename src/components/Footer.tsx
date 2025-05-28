@@ -1,20 +1,17 @@
-
 import { Mail, Phone, MapPin, Send, Heart, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer id="contact" className="bg-dark border-t border-gray-800 relative overflow-hidden">
+  return <footer id="contact" className="bg-dark border-t border-gray-800 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
@@ -41,24 +38,18 @@ export const Footer = () => {
 
           {/* Quick contact cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
-            <a
-              href="mailto:anil@example.com"
-              className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
-                         glow-effect hover:shadow-primary/30"
-            >
+            <a href="mailto:anil@example.com" className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+                         glow-effect hover:shadow-primary/30">
               <Mail className="w-8 h-8 text-primary mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
               <h3 className="font-semibold text-white mb-2">Email Me</h3>
-              <p className="text-gray-400 text-sm">anil@example.com</p>
+              <p className="text-gray-400 text-sm">anilvasupalli@gmail.com</p>
             </a>
             
-            <a
-              href="tel:+1234567890"
-              className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
-                         glow-effect hover:shadow-green-500/30"
-            >
+            <a href="tel:+1234567890" className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+                         glow-effect hover:shadow-green-500/30">
               <Phone className="w-8 h-8 text-green-400 mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
               <h3 className="font-semibold text-white mb-2">Call Me</h3>
-              <p className="text-gray-400 text-sm">+123 456 7890</p>
+              <p className="text-gray-400 text-sm">+91 9550502688</p>
             </a>
             
             <div className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
@@ -72,7 +63,9 @@ export const Footer = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Brand section */}
-          <div className="lg:col-span-1 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <div className="lg:col-span-1 animate-slide-up" style={{
+          animationDelay: '0.1s'
+        }}>
             <h3 className="font-heading font-bold text-3xl text-white mb-6 text-gradient">
               Anil Vasupalli
             </h3>
@@ -81,70 +74,59 @@ export const Footer = () => {
               Let's bring your vision to life with innovative and impactful designs.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="https://www.linkedin.com/in/anilvasupalli"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center 
+              <a href="https://www.linkedin.com/in/anilvasupalli" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center 
                            hover:bg-blue-600 transition-all duration-500 hover:scale-110 
-                           hover:shadow-lg hover:shadow-blue-600/30 group"
-              >
+                           hover:shadow-lg hover:shadow-blue-600/30 group">
                 <span className="text-white font-bold text-sm group-hover:rotate-12 transition-transform duration-300">Li</span>
               </a>
-              <a
-                href="https://www.behance.net/anilvasupalli"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center 
+              <a href="https://www.behance.net/anilvasupalli" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center 
                            hover:bg-primary transition-all duration-500 hover:scale-110 
-                           hover:shadow-lg hover:shadow-primary/30 group"
-              >
+                           hover:shadow-lg hover:shadow-primary/30 group">
                 <span className="text-white font-bold text-sm group-hover:rotate-12 transition-transform duration-300">Be</span>
               </a>
             </div>
           </div>
           
           {/* Navigation */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-slide-up" style={{
+          animationDelay: '0.2s'
+        }}>
             <h4 className="font-heading font-semibold text-white text-xl mb-8">
               Navigation
             </h4>
             <ul className="space-y-4">
-              {['Home', 'Skills', 'Portfolio', 'Testimonials'].map((item) => (
-                <li key={item}>
-                  <button
-                    onClick={() => scrollToSection(item.toLowerCase())}
-                    className="font-body text-gray-400 hover:text-primary transition-all duration-300 
-                               text-left group flex items-center gap-2"
-                  >
+              {['Home', 'Skills', 'Portfolio', 'Testimonials'].map(item => <li key={item}>
+                  <button onClick={() => scrollToSection(item.toLowerCase())} className="font-body text-gray-400 hover:text-primary transition-all duration-300 
+                               text-left group flex items-center gap-2">
                     <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-300"></span>
                     {item}
                   </button>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
           {/* Services */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="animate-slide-up" style={{
+          animationDelay: '0.3s'
+        }}>
             <h4 className="font-heading font-semibold text-white text-xl mb-8">
               Services
             </h4>
             <ul className="space-y-4">
-              {['Graphic Design', 'Video Editing', 'Social Media Design', 'Branding', 'Motion Graphics'].map((service) => (
-                <li key={service}>
+              {['Graphic Design', 'Video Editing', 'Social Media Design', 'Branding', 'Motion Graphics'].map(service => <li key={service}>
                   <div className="font-body text-gray-400 group flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary/50 rounded-full group-hover:bg-primary 
                                      transition-colors duration-300"></span>
                     {service}
                   </div>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
           {/* Newsletter */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-slide-up" style={{
+          animationDelay: '0.4s'
+        }}>
             <h4 className="font-heading font-semibold text-white text-xl mb-8">
               Stay Updated
             </h4>
@@ -152,12 +134,9 @@ export const Footer = () => {
               Subscribe to get updates on new projects, creative insights, and exclusive design tips.
             </p>
             <div className="space-y-4">
-              <Input
-                placeholder="Enter your email"
-                className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 
+              <Input placeholder="Enter your email" className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 
                            focus:border-primary rounded-xl h-12 backdrop-blur-sm
-                           transition-all duration-300 focus:shadow-lg focus:shadow-primary/20"
-              />
+                           transition-all duration-300 focus:shadow-lg focus:shadow-primary/20" />
               <Button className="w-full btn-primary group h-12">
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 Subscribe
@@ -168,7 +147,9 @@ export const Footer = () => {
         
         {/* Bottom section */}
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row 
-                        justify-between items-center animate-slide-up" style={{ animationDelay: '0.5s' }}>
+                        justify-between items-center animate-slide-up" style={{
+        animationDelay: '0.5s'
+      }}>
           <p className="font-body text-gray-500 mb-4 md:mb-0 flex items-center gap-2">
             © {currentYear} Anil Vasupalli. Made with 
             <Heart className="w-4 h-4 text-primary animate-pulse" />
@@ -178,17 +159,11 @@ export const Footer = () => {
           <div className="flex items-center gap-6 text-sm text-gray-500">
             <button className="hover:text-primary transition-colors duration-300">Privacy Policy</button>
             <button className="hover:text-primary transition-colors duration-300">Terms of Service</button>
-            <a 
-              href="https://www.behance.net/anilvasupalli"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors duration-300 flex items-center gap-1"
-            >
+            <a href="https://www.behance.net/anilvasupalli" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300 flex items-center gap-1">
               Portfolio <ExternalLink className="w-3 h-3" />
             </a>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
