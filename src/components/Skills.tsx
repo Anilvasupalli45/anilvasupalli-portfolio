@@ -1,5 +1,5 @@
 
-import { Code, Palette, Video, Tool, Sparkles, Star } from "lucide-react";
+import { Code, Palette, Video, Settings, Sparkles, Star } from "lucide-react";
 
 export const Skills = () => {
   const skills = [
@@ -8,7 +8,7 @@ export const Skills = () => {
     { name: "Adobe After Effects", category: "Video", icon: Video },
     { name: "Adobe Premiere Pro", category: "Video", icon: Video },
     { name: "Canva", category: "Design", icon: Palette },
-    { name: "Anu Script Manager", category: "Tool", icon: Tool },
+    { name: "Anu Script Manager", category: "Tool", icon: Settings },
     { name: "Social Media Design", category: "Specialty", icon: Sparkles },
     { name: "Motion Graphics", category: "Video", icon: Video },
     { name: "Pitch Deck Design", category: "Design", icon: Palette },
@@ -82,10 +82,9 @@ export const Skills = () => {
                 key={skill.name}
                 className={`card-hover glass-morphism rounded-2xl p-8 text-center border 
                            border-gray-800 glow-effect ${config.glow} transform-gpu
-                           animate-scale-in hover:border-primary/50`}
+                           animate-scale-in hover:border-primary/50 group`}
                 style={{ 
-                  animationDelay: `${index * 0.1}s`,
-                  '--stagger': index 
+                  animationDelay: `${index * 0.1}s`
                 }}
               >
                 <div className="relative mb-6">

@@ -93,7 +93,7 @@
   .card-hover {
     @apply transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 
            hover:-translate-y-3 hover:bg-dark-lighter/80 backdrop-blur-sm
-           hover:border-primary/30 group;
+           hover:border-primary/30;
   }
 
   .glow-effect {
@@ -120,10 +120,6 @@
 
   .floating-animation {
     @apply animate-[float_6s_ease-in-out_infinite];
-  }
-
-  .stagger-animation {
-    animation-delay: calc(var(--stagger) * 0.1s);
   }
 }
 
