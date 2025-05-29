@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Eye, Filter, ArrowUp, Palette, Video, Star, Settings, Sparkles, Play } from "lucide-react";
 
@@ -181,11 +181,13 @@ export const Projects = () => {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 
                                 group-hover:opacity-100 transition-all duration-500">
-                  <Button className="btn-primary group/btn transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
-                    View Project
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                  </Button>
+                  <Link to={`/project/${project.id}`}>
+                    <Button className="btn-primary group/btn transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                      View Project
+                      <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               
