@@ -58,7 +58,7 @@ export const Testimonials = () => {
             <span className="text-primary font-medium">Client Love</span>
           </div>
 
-          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
             <span className="text-white">What Clients</span>{" "}
             <span className="text-gradient">Say</span>
           </h2>
@@ -133,7 +133,7 @@ export const Testimonials = () => {
         {/* Call to action */}
         <div className="text-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
           <div className="glass-morphism rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white mb-4">
+            <h3 className="font-title font-bold text-2xl lg:text-3xl text-white mb-4">
               Ready to join these happy clients?
             </h3>
             <p className="text-gray-400 mb-6">Let's create something amazing together</p>

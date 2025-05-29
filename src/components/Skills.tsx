@@ -61,7 +61,7 @@ export const Skills = () => {
             <span className="text-primary font-medium">Technical Expertise</span>
           </div>
           
-          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
             <span className="text-white">My</span>{" "}
             <span className="text-gradient">Skills</span>
           </h2>
