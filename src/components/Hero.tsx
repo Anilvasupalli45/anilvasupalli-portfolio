@@ -1,5 +1,7 @@
+
 import { Download, Sparkles, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 export const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -9,7 +11,9 @@ export const Hero = () => {
       });
     }
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl floating-animation"></div>
@@ -30,9 +34,8 @@ export const Hero = () => {
             <Zap className="w-6 h-6 text-primary animate-pulse" />
           </div>
 
-          <h1 className="font-title font-bold text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] mb-12 leading-tight">
-            <span className="block text-primary-DEFAULT text-center text-9xl">Hi, I'm Anil</span>
-            
+          <h1 className="font-playfair font-bold text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] mb-12 leading-tight">
+            <span className="block text-white text-center text-9xl">Hi, I'm Anil</span>
           </h1>
           
           <div className="relative mb-12">
@@ -62,7 +65,8 @@ export const Hero = () => {
             number: "3+",
             label: "Years Experience",
             delay: "0.4s"
-          }].map((stat, index) => <div key={stat.label} className="text-center group animate-scale-in" style={{
+          }].map((stat, index) => (
+            <div key={stat.label} className="text-center group animate-scale-in" style={{
             animationDelay: stat.delay
           }}>
                 <div className="relative">
@@ -78,7 +82,8 @@ export const Hero = () => {
                 <div className="text-gray-400 font-body font-medium text-xl">
                   {stat.label}
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
           
           {/* Enhanced CTA Buttons */}
@@ -105,5 +110,6 @@ export const Hero = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

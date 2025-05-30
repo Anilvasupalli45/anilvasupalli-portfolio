@@ -46,20 +46,6 @@ export const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=300&fit=crop",
       icon: Play,
       color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Podcast Edits",
-      description: "Clean, professional podcast editing.",
-      image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=500&h=300&fit=crop",
-      icon: Video,
-      color: "from-teal-500 to-cyan-500"
-    },
-    {
-      title: "Motion Graphics",
-      description: "Dynamic animations and effects.",
-      image: "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=500&h=300&fit=crop",
-      icon: Play,
-      color: "from-indigo-500 to-purple-500"
     }
   ];
 
@@ -79,14 +65,14 @@ export const Portfolio = () => {
           <div className="absolute bottom-20 right-10 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl floating-animation" style={{ animationDelay: '3s' }}></div>
         </div>
 
-        <div className="max-w-8xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20 animate-slide-up">
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-8">
               <Eye className="w-5 h-5 text-primary" />
               <span className="text-primary font-medium">Creative Showcase</span>
             </div>
 
-            <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+            <h2 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
               <span className="text-white">My</span>{" "}
               <span className="text-gradient">Portfolio</span>
             </h2>
@@ -97,8 +83,8 @@ export const Portfolio = () => {
             </p>
           </div>
           
-          {/* Categories in single horizontal line */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-6 mb-16 overflow-x-auto">
+          {/* Categories Grid - Improved Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {portfolioCategories.map((category, index) => {
               const Icon = category.icon;
               
@@ -106,7 +92,7 @@ export const Portfolio = () => {
                 <div
                   key={category.title}
                   className="card-hover glass-morphism rounded-2xl overflow-hidden border border-gray-800 
-                             group glow-effect transform-gpu animate-scale-in min-w-[280px]"
+                             group glow-effect transform-gpu animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative h-48 overflow-hidden">
@@ -134,7 +120,7 @@ export const Portfolio = () => {
                                    group-hover:text-primary transition-colors duration-300">
                       {category.title}
                     </h3>
-                    <p className="font-body text-gray-400 mb-4 text-sm leading-relaxed h-10">
+                    <p className="font-body text-gray-400 mb-4 text-sm leading-relaxed">
                       {category.description}
                     </p>
                     
@@ -152,38 +138,28 @@ export const Portfolio = () => {
             })}
           </div>
           
-          {/* Enhanced CTA section */}
+          {/* Behance CTA - Simplified */}
           <div className="text-center animate-slide-up" style={{ animationDelay: '0.8s' }}>
             <div className="glass-morphism rounded-3xl p-12 max-w-4xl mx-auto glow-effect">
-              <h3 className="font-title font-bold text-3xl lg:text-4xl text-white mb-6">
+              <h3 className="font-playfair font-bold text-3xl lg:text-4xl text-white mb-6">
                 Want to see more of my work?
               </h3>
               <p className="text-gray-400 text-lg lg:text-xl mb-8 max-w-2xl mx-auto">
                 Dive into my complete portfolio on Behance and discover the full range of my creative projects
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a
-                  href="https://www.behance.net/anilvasupalli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <Button className="btn-secondary text-lg lg:text-xl px-12 py-6 group animate-glow-pulse">
-                    <ExternalLink className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                    View Full Portfolio on Behance
-                    <Star className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                  </Button>
-                </a>
-                
-                <Button 
-                  onClick={scrollToProjects}
-                  className="btn-primary group px-8 py-4"
-                >
-                  <Eye className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                  View Detailed Projects
+              <a
+                href="https://www.behance.net/anilvasupalli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button className="btn-primary text-lg lg:text-xl px-12 py-6 group animate-glow-pulse">
+                  <ExternalLink className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+                  View Full Portfolio on Behance
+                  <Star className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                 </Button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
