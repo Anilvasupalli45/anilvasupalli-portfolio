@@ -1,7 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Eye, Palette, Video, Star, Play } from "lucide-react";
 import { Projects } from "./Projects";
+import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   const portfolioCategories = [
@@ -13,39 +13,18 @@ export const Portfolio = () => {
       color: "from-pink-500 to-rose-500"
     },
     {
-      title: "Print Media Designs",
-      description: "Professional brochures and materials.",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500&h=300&fit=crop",
-      icon: Palette,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Branding",
+      title: "Branding & Identity",
       description: "Complete brand identity systems.",
       image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=500&h=300&fit=crop",
       icon: Star,
       color: "from-purple-500 to-indigo-500"
     },
     {
-      title: "Logo Designs",
-      description: "Memorable logos for your brand.",
-      image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=500&h=300&fit=crop",
-      icon: Star,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Video Edits",
-      description: "Professional video editing services.",
+      title: "Video & Motion",
+      description: "Professional video editing and motion graphics.",
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop",
       icon: Video,
       color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Short Video Edits",
-      description: "Engaging short-form content creation.",
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=300&fit=crop",
-      icon: Play,
-      color: "from-green-500 to-emerald-500"
     }
   ];
 
@@ -72,7 +51,7 @@ export const Portfolio = () => {
               <span className="text-primary font-medium">Creative Showcase</span>
             </div>
 
-            <h2 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+            <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
               <span className="text-white">My</span>{" "}
               <span className="text-gradient">Portfolio</span>
             </h2>
@@ -83,8 +62,8 @@ export const Portfolio = () => {
             </p>
           </div>
           
-          {/* Categories Grid - Improved Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* Categories Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {portfolioCategories.map((category, index) => {
               const Icon = category.icon;
               
@@ -124,24 +103,23 @@ export const Portfolio = () => {
                       {category.description}
                     </p>
                     
-                    <Button 
-                      onClick={scrollToProjects}
-                      className="w-full btn-primary group/btn text-sm"
-                    >
-                      <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
-                      View Projects
-                      <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                    </Button>
+                    <Link to="/projects">
+                      <Button className="w-full btn-primary group/btn text-sm">
+                        <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                        View Projects
+                        <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               );
             })}
           </div>
           
-          {/* Behance CTA - Simplified */}
+          {/* Behance CTA */}
           <div className="text-center animate-slide-up" style={{ animationDelay: '0.8s' }}>
             <div className="glass-morphism rounded-3xl p-12 max-w-4xl mx-auto glow-effect">
-              <h3 className="font-playfair font-bold text-3xl lg:text-4xl text-white mb-6">
+              <h3 className="font-title font-bold text-3xl lg:text-4xl text-white mb-6">
                 Want to see more of my work?
               </h3>
               <p className="text-gray-400 text-lg lg:text-xl mb-8 max-w-2xl mx-auto">
