@@ -1,27 +1,27 @@
+
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Eye, Palette, Video, Star, Play } from "lucide-react";
+import { ExternalLink, Eye, Palette, Video, Star } from "lucide-react";
 import { Projects } from "./Projects";
-import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   const portfolioCategories = [
     {
       title: "Social Media Design",
-      description: "Eye-catching designs for social platforms.",
+      description: "Eye-catching designs for social platforms that drive engagement and brand awareness.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
       icon: Palette,
       color: "from-pink-500 to-rose-500"
     },
     {
       title: "Branding & Identity",
-      description: "Complete brand identity systems.",
+      description: "Complete brand identity systems that tell compelling stories and create lasting impressions.",
       image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=500&h=300&fit=crop",
       icon: Star,
       color: "from-purple-500 to-indigo-500"
     },
     {
       title: "Video & Motion",
-      description: "Professional video editing and motion graphics.",
+      description: "Professional video editing and motion graphics that bring ideas to life with dynamic storytelling.",
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop",
       icon: Video,
       color: "from-red-500 to-pink-500"
@@ -74,7 +74,7 @@ export const Portfolio = () => {
                              group glow-effect transform-gpu animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden">
                     <img
                       src={category.image}
                       alt={category.title}
@@ -86,30 +86,31 @@ export const Portfolio = () => {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
                     
                     {/* Icon overlay */}
-                    <div className="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-sm 
+                    <div className="absolute top-4 right-4 w-12 h-12 bg-black/50 backdrop-blur-sm 
                                     rounded-full flex items-center justify-center opacity-0 
                                     group-hover:opacity-100 transition-all duration-500 
                                     transform translate-y-2 group-hover:translate-y-0">
-                      <Icon className="w-5 h-5 text-white" />
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   
-                  <div className="p-6">
-                    <h3 className="font-heading font-semibold text-lg text-white mb-3 
+                  <div className="p-8">
+                    <h3 className="font-heading font-semibold text-xl text-white mb-4 
                                    group-hover:text-primary transition-colors duration-300">
                       {category.title}
                     </h3>
-                    <p className="font-body text-gray-400 mb-4 text-sm leading-relaxed">
+                    <p className="font-body text-gray-400 mb-6 leading-relaxed">
                       {category.description}
                     </p>
                     
-                    <Link to="/projects">
-                      <Button className="w-full btn-primary group/btn text-sm">
-                        <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
-                        View Projects
-                        <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                      </Button>
-                    </Link>
+                    <Button 
+                      onClick={scrollToProjects}
+                      className="w-full btn-primary group/btn"
+                    >
+                      <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                      View Projects
+                      <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                    </Button>
                   </div>
                 </div>
               );

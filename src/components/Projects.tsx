@@ -1,7 +1,8 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Eye, Filter, ArrowUp, Palette, Video, Star, Settings, Sparkles, Play } from "lucide-react";
+import { ExternalLink, Eye, Filter, ArrowUp, Palette, Video, Star, Play, Sparkles } from "lucide-react";
 
 export const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -11,7 +12,6 @@ export const Projects = () => {
     { name: "Social Media", icon: Palette },
     { name: "Video Edits", icon: Video },
     { name: "Branding", icon: Star },
-    { name: "Print Design", icon: Palette },
     { name: "Motion Graphics", icon: Play },
     { name: "Logo Design", icon: Sparkles }
   ];
@@ -20,7 +20,7 @@ export const Projects = () => {
     {
       id: 1,
       title: "Brand Identity for Tech Startup",
-      description: "Complete branding package including logo, color palette, and brand guidelines.",
+      description: "Complete branding package including logo, color palette, and brand guidelines for a cutting-edge technology company.",
       image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=500&h=300&fit=crop",
       category: "Branding",
       tools: ["Illustrator", "Photoshop"],
@@ -29,7 +29,7 @@ export const Projects = () => {
     {
       id: 2,
       title: "Social Media Campaign Design",
-      description: "Instagram and Facebook post designs for a lifestyle brand's product launch.",
+      description: "Instagram and Facebook post designs for a lifestyle brand's product launch with consistent visual storytelling.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
       category: "Social Media",
       tools: ["Photoshop", "Canva"],
@@ -38,7 +38,7 @@ export const Projects = () => {
     {
       id: 3,
       title: "Product Launch Video",
-      description: "Dynamic video editing with motion graphics for a tech product announcement.",
+      description: "Dynamic video editing with motion graphics for a tech product announcement that drives engagement.",
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop",
       category: "Video Edits",
       tools: ["Premiere Pro", "After Effects"],
@@ -46,56 +46,29 @@ export const Projects = () => {
     },
     {
       id: 4,
-      title: "Corporate Brochure Design",
-      description: "Professional tri-fold brochure for a consulting firm's service offerings.",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500&h=300&fit=crop",
-      category: "Print Design",
-      tools: ["InDesign", "Illustrator"],
-      link: "#"
-    },
-    {
-      id: 5,
       title: "Animated Logo Reveal",
-      description: "Eye-catching logo animation for brand presentations and digital media.",
+      description: "Eye-catching logo animation for brand presentations and digital media with smooth transitions.",
       image: "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=500&h=300&fit=crop",
       category: "Motion Graphics",
       tools: ["After Effects", "Illustrator"],
       link: "#"
     },
     {
-      id: 6,
-      title: "Restaurant Menu Design",
-      description: "Elegant menu layout with custom typography and food photography integration.",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500&h=300&fit=crop",
-      category: "Print Design",
-      tools: ["InDesign", "Photoshop"],
-      link: "#"
-    },
-    {
-      id: 7,
+      id: 5,
       title: "E-commerce Social Posts",
-      description: "Product showcase designs for online store's social media marketing.",
+      description: "Product showcase designs for online store's social media marketing with focus on conversion.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
       category: "Social Media",
       tools: ["Photoshop", "Canva"],
       link: "#"
     },
     {
-      id: 8,
+      id: 6,
       title: "Minimalist Logo Collection",
-      description: "Clean, modern logo designs for various small business clients.",
+      description: "Clean, modern logo designs for various small business clients with timeless appeal.",
       image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=500&h=300&fit=crop",
       category: "Logo Design",
       tools: ["Illustrator", "Photoshop"],
-      link: "#"
-    },
-    {
-      id: 9,
-      title: "Podcast Intro Animation",
-      description: "Engaging animated intro sequence for a weekly business podcast.",
-      image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=500&h=300&fit=crop",
-      category: "Motion Graphics",
-      tools: ["After Effects", "Premiere Pro"],
       link: "#"
     }
   ];
@@ -116,9 +89,9 @@ export const Projects = () => {
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl floating-animation" style={{ animationDelay: '3s' }}></div>
       </div>
 
-      <div className="max-w-8xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-20 animate-slide-up">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-8">
             <Eye className="w-5 h-5 text-primary" />
             <span className="text-primary font-medium">Featured Work</span>
@@ -135,7 +108,7 @@ export const Projects = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+        <div className="flex flex-wrap justify-center gap-4 mb-20 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           {categories.map((category) => {
             const Icon = category.icon;
             const isActive = activeFilter === category.name;
@@ -144,13 +117,13 @@ export const Projects = () => {
               <button
                 key={category.name}
                 onClick={() => setActiveFilter(category.name)}
-                className={`group flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+                className={`group flex items-center gap-3 px-8 py-4 rounded-full border transition-all duration-300 ${
                   isActive
-                    ? 'bg-primary border-primary text-white shadow-lg shadow-primary/30'
-                    : 'bg-dark-card/60 border-gray-800 text-gray-400 hover:border-primary/50 hover:text-primary backdrop-blur-sm'
+                    ? 'bg-primary border-primary text-white shadow-lg shadow-primary/30 scale-105'
+                    : 'bg-dark-card/60 border-gray-800 text-gray-400 hover:border-primary/50 hover:text-primary backdrop-blur-sm hover:scale-105'
                 }`}
               >
-                <Icon className={`w-4 h-4 transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`} />
+                <Icon className={`w-5 h-5 transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`} />
                 <span className="font-medium">{category.name}</span>
               </button>
             );
@@ -167,7 +140,7 @@ export const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={project.image}
                   alt={`${project.title} - ${project.description}`}
@@ -192,17 +165,17 @@ export const Projects = () => {
               </div>
               
               {/* Project Info */}
-              <div className="p-6">
-                <h3 className="font-heading font-semibold text-xl text-white mb-3 
+              <div className="p-8">
+                <h3 className="font-heading font-semibold text-xl text-white mb-4 
                                group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="font-body text-gray-400 mb-4 text-sm leading-relaxed">
+                <p className="font-body text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
                 
                 {/* Tools/Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
@@ -216,8 +189,8 @@ export const Projects = () => {
                 
                 {/* Category Badge */}
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 bg-gray-800/50 border border-gray-700 rounded-full 
-                                   text-xs text-gray-300 font-medium">
+                  <span className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full 
+                                   text-sm text-gray-300 font-medium">
                     {project.category}
                   </span>
                   <div className="w-8 h-1 bg-gradient-to-r from-primary to-orange-500 rounded-full 
