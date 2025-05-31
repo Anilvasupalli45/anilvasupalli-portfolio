@@ -110,7 +110,10 @@ export const Hero = () => {
               Let's Work Together
             </Button>
             <Button asChild className="btn-secondary group text-xl px-16 py-8 rounded-2xl">
-              <a href="#" className="flex items-center gap-3">
+              <a href="https://drive.google.com/file/d/17sJeawuPrk2VkPNe604u5E0Gc6Pn_rCI/view?usp=sharing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="flex items-center gap-3">
                 <Download className="w-7 h-7 group-hover:bounce transition-transform duration-300" />
                 Download Resume
               </a>

@@ -79,7 +79,9 @@ export const Navigation = () => {
                 <Mail className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform duration-300" />
               </a>
               <a
-                href="#"
+                href="https://drive.google.com/file/d/17sJeawuPrk2VkPNe604u5E0Gc6Pn_rCI/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-4 rounded-2xl hover:bg-primary/20 transition-all duration-300 
                            group hover:scale-110 border border-gray-800 hover:border-primary/50"
               >
@@ -158,7 +160,9 @@ export const Navigation = () => {
                 <span className="font-semibold text-lg">Email Me</span>
               </a>
               <a
-                href="#"
+                href="https://drive.google.com/file/d/17sJeawuPrk2VkPNe604u5E0Gc6Pn_rCI/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 w-full p-6 rounded-2xl 
                            bg-gray-800/50 border border-gray-700 text-white 
                            hover:bg-gray-700 hover:border-gray-600 transition-all duration-300"
