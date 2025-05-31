@@ -1,7 +1,5 @@
-
 import { Download, Sparkles, Zap, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 export const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -11,7 +9,6 @@ export const Hero = () => {
       });
     }
   };
-
   const scrollToSkills = () => {
     const element = document.getElementById("skills");
     if (element) {
@@ -20,9 +17,7 @@ export const Hero = () => {
       });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-80 h-80 bg-primary/30 rounded-full blur-3xl floating-animation"></div>
@@ -49,8 +44,8 @@ export const Hero = () => {
           </div>
 
           <h1 className="font-playfair font-bold text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] mb-16 leading-tight">
-            <span className="block text-white text-center">Hi, I'm</span>
-            <span className="block text-gradient text-center mt-4">Anil</span>
+            <span className="block text-white text-center text-9xl">Hi, I'm</span>
+            <span className="block text-gradient text-center mt-4 text-9xl">Anil Vasupalli</span>
           </h1>
           
           <div className="relative mb-16">
@@ -84,8 +79,7 @@ export const Hero = () => {
             label: "Years Experience",
             delay: "0.4s",
             color: "from-orange-500 to-red-500"
-          }].map((stat, index) => (
-            <div key={stat.label} className="text-center group animate-scale-in relative" style={{
+          }].map((stat, index) => <div key={stat.label} className="text-center group animate-scale-in relative" style={{
             animationDelay: stat.delay
           }}>
                 <div className="relative mb-6">
@@ -105,8 +99,7 @@ export const Hero = () => {
                 </div>
                 <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-orange-500 mx-auto mt-4 
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           {/* Enhanced CTA Buttons */}
@@ -127,11 +120,8 @@ export const Hero = () => {
       </div>
 
       {/* Enhanced scroll indicator */}
-      <button 
-        onClick={scrollToSkills}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce 
-                   group hover:scale-110 transition-transform duration-300"
-      >
+      <button onClick={scrollToSkills} className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce 
+                   group hover:scale-110 transition-transform duration-300">
         <div className="w-8 h-12 border-2 border-primary/60 rounded-full flex justify-center 
                         group-hover:border-primary transition-colors duration-300 relative">
           <div className="w-1.5 h-4 bg-primary rounded-full mt-3 animate-pulse"></div>
@@ -139,6 +129,5 @@ export const Hero = () => {
                                  absolute -bottom-8 transition-colors duration-300" />
         </div>
       </button>
-    </section>
-  );
+    </section>;
 };
