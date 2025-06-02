@@ -1,6 +1,6 @@
+
 import { Mail, Phone, MapPin, Send, Heart, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -26,9 +26,9 @@ export const Footer = () => {
             <span className="text-primary font-medium">Get In Touch</span>
           </div>
 
-          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 tracking-tight">
             <span className="text-white">Let's</span>{" "}
-            <span className="text-gradient">Connect</span>
+            <span className="text-gradient font-title">Connect</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-8"></div>
           <p className="font-body text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
@@ -61,7 +61,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Brand section */}
           <div className="lg:col-span-1 animate-slide-up" style={{
           animationDelay: '0.1s'
@@ -122,33 +122,12 @@ export const Footer = () => {
                 </li>)}
             </ul>
           </div>
-          
-          {/* Newsletter */}
-          <div className="animate-slide-up" style={{
-          animationDelay: '0.4s'
-        }}>
-            <h4 className="font-heading font-semibold text-white text-xl mb-8">
-              Stay Updated
-            </h4>
-            <p className="font-body text-gray-400 text-sm mb-6 leading-relaxed">
-              Subscribe to get updates on new projects, creative insights, and exclusive design tips.
-            </p>
-            <div className="space-y-4">
-              <Input placeholder="Enter your email" className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 
-                           focus:border-primary rounded-xl h-12 backdrop-blur-sm
-                           transition-all duration-300 focus:shadow-lg focus:shadow-primary/20" />
-              <Button className="w-full btn-primary group h-12">
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                Subscribe
-              </Button>
-            </div>
-          </div>
         </div>
         
         {/* Bottom section */}
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row 
                         justify-between items-center animate-slide-up" style={{
-        animationDelay: '0.5s'
+        animationDelay: '0.4s'
       }}>
           <p className="font-body text-gray-500 mb-4 md:mb-0 flex items-center gap-2">
             © {currentYear} Anil Vasupalli. Made with 
