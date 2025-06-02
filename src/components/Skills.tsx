@@ -1,20 +1,19 @@
-
-import { Code, Palette, Video, Settings, Sparkles, Star } from "lucide-react";
+import { Palette, Monitor, Share2, Star, Image, Camera, Type, Branding, ColorSwatch, Film, Video, Headphones } from "lucide-react";
 
 export const Skills = () => {
   const skills = [
-    { name: "Adobe Photoshop", category: "Design", icon: Palette },
-    { name: "Adobe Illustrator", category: "Design", icon: Palette },
-    { name: "Adobe After Effects", category: "Video", icon: Video },
-    { name: "Adobe Premiere Pro", category: "Video", icon: Video },
-    { name: "Canva", category: "Design", icon: Palette },
-    { name: "Anu Script Manager", category: "Tool", icon: Settings },
-    { name: "Social Media Design", category: "Specialty", icon: Sparkles },
-    { name: "Motion Graphics", category: "Video", icon: Video },
-    { name: "Pitch Deck Design", category: "Design", icon: Palette },
     { name: "Print Design", category: "Design", icon: Palette },
+    { name: "Digital Design", category: "Design", icon: Monitor },
+    { name: "Social Media Design", category: "Design", icon: Share2 },
     { name: "Logo Design", category: "Branding", icon: Star },
-    { name: "Video Editing", category: "Video", icon: Video }
+    { name: "Banners Design", category: "Design", icon: Image },
+    { name: "Photo Retouching", category: "Photo", icon: Camera },
+    { name: "Typography", category: "Design", icon: Type },
+    { name: "Branding", category: "Branding", icon: Branding },
+    { name: "Color Grading", category: "Video", icon: ColorSwatch },
+    { name: "Motion Graphics", category: "Video", icon: Film },
+    { name: "Short Videos", category: "Video", icon: Video },
+    { name: "Podcast Editing", category: "Audio", icon: Headphones }
   ];
 
   const getCategoryConfig = (category: string) => {
@@ -27,11 +26,11 @@ export const Skills = () => {
         color: "bg-primary/20 text-primary border-primary/30",
         glow: "hover:shadow-primary/30"
       },
-      "Tool": { 
+      "Photo": { 
         color: "bg-green-500/20 text-green-300 border-green-500/30",
         glow: "hover:shadow-green-500/30"
       },
-      "Specialty": { 
+      "Audio": { 
         color: "bg-purple-500/20 text-purple-300 border-purple-500/30",
         glow: "hover:shadow-purple-500/30"
       },
@@ -57,7 +56,7 @@ export const Skills = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20 animate-slide-up">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-8">
-            <Code className="w-5 h-5 text-primary" />
+            <Palette className="w-5 h-5 text-primary" />
             <span className="text-primary font-medium">Technical Expertise</span>
           </div>
           
@@ -123,7 +122,7 @@ export const Skills = () => {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="btn-primary group"
           >
-            <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+            <Star className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             Let's Create Together
           </button>
         </div>
