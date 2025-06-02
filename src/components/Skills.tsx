@@ -1,4 +1,5 @@
-import { Palette, Monitor, Share2, Star, Image, Camera, Type, Branding, ColorSwatch, Film, Video, Headphones } from "lucide-react";
+
+import { Palette, Monitor, Share2, Star, Image, Camera, Type, Badge, Film, Video, Headphones } from "lucide-react";
 
 export const Skills = () => {
   const skills = [
@@ -9,8 +10,8 @@ export const Skills = () => {
     { name: "Banners Design", category: "Design", icon: Image },
     { name: "Photo Retouching", category: "Photo", icon: Camera },
     { name: "Typography", category: "Design", icon: Type },
-    { name: "Branding", category: "Branding", icon: Branding },
-    { name: "Color Grading", category: "Video", icon: ColorSwatch },
+    { name: "Branding", category: "Branding", icon: Badge },
+    { name: "Color Grading", category: "Video", icon: Palette },
     { name: "Motion Graphics", category: "Video", icon: Film },
     { name: "Short Videos", category: "Video", icon: Video },
     { name: "Podcast Editing", category: "Audio", icon: Headphones }
