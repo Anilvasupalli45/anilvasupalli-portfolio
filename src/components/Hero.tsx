@@ -78,12 +78,12 @@ export const Hero = () => {
               number: "30+",
               label: "Happy Clients",
               delay: "0.2s",
-              color: "from-purple-500 to-pink-500"
+              color: "from-primary to-orange-500"
             }, {
               number: "3+",
               label: "Years Experience",
               delay: "0.4s",
-              color: "from-orange-500 to-red-500"
+              color: "from-primary to-orange-500"
             }].map((stat, index) => (
               <div key={stat.label} className="text-center group animate-scale-in relative" style={{
                 animationDelay: stat.delay

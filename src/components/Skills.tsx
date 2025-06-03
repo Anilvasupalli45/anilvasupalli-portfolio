@@ -3,48 +3,19 @@ import { Palette, Monitor, Share2, Star, Image, Camera, Type, Badge, Film, Video
 
 export const Skills = () => {
   const skills = [
-    { name: "Print Design", category: "Design", icon: Palette },
-    { name: "Digital Design", category: "Design", icon: Monitor },
-    { name: "Social Media Design", category: "Design", icon: Share2 },
-    { name: "Logo Design", category: "Branding", icon: Star },
-    { name: "Banners Design", category: "Design", icon: Image },
-    { name: "Photo Retouching", category: "Photo", icon: Camera },
-    { name: "Typography", category: "Design", icon: Type },
-    { name: "Branding", category: "Branding", icon: Badge },
-    { name: "Color Grading", category: "Video", icon: Palette },
-    { name: "Motion Graphics", category: "Video", icon: Film },
-    { name: "Short Videos", category: "Video", icon: Video },
-    { name: "Podcast Editing", category: "Audio", icon: Headphones }
+    { name: "Print Design", icon: Palette },
+    { name: "Digital Design", icon: Monitor },
+    { name: "Social Media Design", icon: Share2 },
+    { name: "Logo Design", icon: Star },
+    { name: "Banners Design", icon: Image },
+    { name: "Photo Retouching", icon: Camera },
+    { name: "Typography", icon: Type },
+    { name: "Branding", icon: Badge },
+    { name: "Color Grading", icon: Palette },
+    { name: "Motion Graphics", icon: Film },
+    { name: "Short Videos", icon: Video },
+    { name: "Podcast Editing", icon: Headphones }
   ];
-
-  const getCategoryConfig = (category: string) => {
-    const configs = {
-      "Design": { 
-        color: "bg-blue-500/20 text-blue-300 border-blue-500/30",
-        glow: "hover:shadow-blue-500/30"
-      },
-      "Video": { 
-        color: "bg-primary/20 text-primary border-primary/30",
-        glow: "hover:shadow-primary/30"
-      },
-      "Photo": { 
-        color: "bg-green-500/20 text-green-300 border-green-500/30",
-        glow: "hover:shadow-green-500/30"
-      },
-      "Audio": { 
-        color: "bg-purple-500/20 text-purple-300 border-purple-500/30",
-        glow: "hover:shadow-purple-500/30"
-      },
-      "Branding": { 
-        color: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-        glow: "hover:shadow-yellow-500/30"
-      }
-    };
-    return configs[category as keyof typeof configs] || { 
-      color: "bg-gray-500/20 text-gray-300 border-gray-500/30",
-      glow: "hover:shadow-gray-500/30"
-    };
-  };
 
   return (
     <section id="skills" className="section-padding bg-dark-lighter relative overflow-hidden">
@@ -61,7 +32,7 @@ export const Skills = () => {
             <span className="text-primary font-medium">Technical Expertise</span>
           </div>
           
-          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
+          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8 tracking-tight">
             <span className="text-white">My</span>{" "}
             <span className="text-gradient">Skills</span>
           </h2>
@@ -74,37 +45,30 @@ export const Skills = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {skills.map((skill, index) => {
-            const config = getCategoryConfig(skill.category);
             const Icon = skill.icon;
             
             return (
               <div
                 key={skill.name}
                 className={`card-hover glass-morphism rounded-2xl p-8 text-center border 
-                           border-gray-800 glow-effect ${config.glow} transform-gpu
+                           border-gray-800 glow-effect hover:shadow-primary/30 transform-gpu
                            animate-scale-in hover:border-primary/50 group`}
                 style={{ 
                   animationDelay: `${index * 0.1}s`
                 }}
               >
                 <div className="relative mb-6">
-                  <div className={`w-16 h-16 mx-auto rounded-2xl ${config.color.split(' ')[0]} 
+                  <div className={`w-16 h-16 mx-auto rounded-2xl bg-primary/20 
                                   flex items-center justify-center mb-4 group-hover:scale-110 
                                   transition-transform duration-500`}>
-                    <Icon className="w-8 h-8" />
+                    <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <div className={`absolute inset-0 w-16 h-16 mx-auto rounded-2xl 
-                                  ${config.color.split(' ')[0]} blur-xl opacity-50
+                                  bg-primary/20 blur-xl opacity-50
                                   group-hover:opacity-100 transition-opacity duration-500`}></div>
                 </div>
-
-                <div className={`inline-block px-4 py-2 rounded-full text-sm font-medium border mb-6 
-                                ${config.color} backdrop-blur-sm transition-all duration-300
-                                group-hover:scale-105`}>
-                  {skill.category}
-                </div>
                 
-                <h3 className="font-body font-semibold text-white text-lg lg:text-xl mb-2 
+                <h3 className="font-body font-semibold text-white text-lg lg:text-xl mb-4 
                                group-hover:text-primary transition-colors duration-300">
                   {skill.name}
                 </h3>

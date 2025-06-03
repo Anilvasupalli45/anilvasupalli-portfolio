@@ -26,9 +26,9 @@ export const Footer = () => {
             <span className="text-primary font-medium">Get In Touch</span>
           </div>
 
-          <h2 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 tracking-tight">
+          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8 tracking-tight">
             <span className="text-white">Let's</span>{" "}
-            <span className="text-gradient font-title">Connect</span>
+            <span className="text-gradient">Connect</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-8"></div>
           <p className="font-body text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
@@ -66,7 +66,7 @@ export const Footer = () => {
           <div className="lg:col-span-1 animate-slide-up" style={{
           animationDelay: '0.1s'
         }}>
-            <h3 className="font-heading font-bold text-3xl text-white mb-6 text-gradient">
+            <h3 className="font-title font-bold text-3xl text-white mb-6 text-gradient">
               Anil Vasupalli
             </h3>
             <p className="font-body text-gray-400 mb-8 leading-relaxed">
