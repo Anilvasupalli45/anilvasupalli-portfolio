@@ -18,34 +18,34 @@ export const Footer = () => {
         <div className="absolute bottom-20 right-20 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-8xl mx-auto px-4 md:px-8 lg:px-16 xl:px-20 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 relative z-10">
         {/* Main contact section */}
-        <div className="text-center mb-20 animate-slide-up">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-8">
+        <div className="text-center mb-16 animate-slide-up">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-6">
             <Send className="w-5 h-5 text-primary" />
             <span className="text-primary font-medium">Get In Touch</span>
           </div>
 
-          <h2 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8 tracking-tight">
+          <h2 className="font-title font-bold text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">
             <span className="text-white">Let's</span>{" "}
             <span className="text-gradient">Connect</span>
           </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-8"></div>
-          <p className="font-body text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-6"></div>
+          <p className="font-body text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
             Ready to bring your creative vision to life? Let's discuss your project and create something 
             <span className="text-primary font-semibold"> extraordinary together</span>
           </p>
 
           {/* Quick contact cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
-            <a href="mailto:anil@example.com" className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+            <a href="mailto:anilvasupalli@gmail.com" className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
                          glow-effect hover:shadow-primary/30">
               <Mail className="w-8 h-8 text-primary mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
               <h3 className="font-semibold text-white mb-2">Email Me</h3>
               <p className="text-gray-400 text-sm">anilvasupalli@gmail.com</p>
             </a>
             
-            <a href="tel:+1234567890" className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
+            <a href="tel:+919550502688" className="glass-morphism rounded-2xl p-6 group hover:scale-105 transition-all duration-500 
                          glow-effect hover:shadow-green-500/30">
               <Phone className="w-8 h-8 text-green-400 mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300" />
               <h3 className="font-semibold text-white mb-2">Call Me</h3>
@@ -61,15 +61,15 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Brand section */}
           <div className="lg:col-span-1 animate-slide-up" style={{
           animationDelay: '0.1s'
         }}>
-            <h3 className="font-title font-bold text-3xl text-white mb-6 text-gradient">
+            <h3 className="font-title font-bold text-2xl text-white mb-4 text-gradient">
               Anil Vasupalli
             </h3>
-            <p className="font-body text-gray-400 mb-8 leading-relaxed">
+            <p className="font-body text-gray-400 mb-6 leading-relaxed">
               Creative professional specializing in graphic design and video editing.
               Let's bring your vision to life with innovative and impactful designs.
             </p>
@@ -91,10 +91,10 @@ export const Footer = () => {
           <div className="animate-slide-up" style={{
           animationDelay: '0.2s'
         }}>
-            <h4 className="font-heading font-semibold text-white text-xl mb-8">
+            <h4 className="font-heading font-semibold text-white text-lg mb-6">
               Navigation
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {['Home', 'Skills', 'Portfolio', 'Testimonials'].map(item => <li key={item}>
                   <button onClick={() => scrollToSection(item.toLowerCase())} className="font-body text-gray-400 hover:text-primary transition-all duration-300 
                                text-left group flex items-center gap-2">
@@ -109,10 +109,10 @@ export const Footer = () => {
           <div className="animate-slide-up" style={{
           animationDelay: '0.3s'
         }}>
-            <h4 className="font-heading font-semibold text-white text-xl mb-8">
+            <h4 className="font-heading font-semibold text-white text-lg mb-6">
               Services
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {['Graphic Design', 'Video Editing', 'Social Media Design', 'Branding', 'Motion Graphics'].map(service => <li key={service}>
                   <div className="font-body text-gray-400 group flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary/50 rounded-full group-hover:bg-primary 
@@ -125,11 +125,11 @@ export const Footer = () => {
         </div>
         
         {/* Bottom section */}
-        <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row 
+        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row 
                         justify-between items-center animate-slide-up" style={{
         animationDelay: '0.4s'
       }}>
-          <p className="font-body text-gray-500 mb-4 md:mb-0 flex items-center gap-2">
+          <p className="font-body text-gray-500 mb-4 md:mb-0 flex items-center gap-2 text-sm">
             © {currentYear} Anil Vasupalli. Made with 
             <Heart className="w-4 h-4 text-primary animate-pulse" />
             All rights reserved.
