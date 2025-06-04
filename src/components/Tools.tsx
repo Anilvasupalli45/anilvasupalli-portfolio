@@ -92,52 +92,6 @@ export const Tools = () => {
             </div>
           ))}
         </div>
-
-        {/* Logo Design Section */}
-        <div className="mt-20 text-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
-          <div className="glass-morphism rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="font-title font-bold text-2xl lg:text-3xl text-white mb-6">
-              Professional Logo Design
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
-              <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=200&fit=crop" 
-                  alt="Logo Design Sample"
-                  className="w-full h-24 object-cover rounded-lg mb-3"
-                />
-                <p className="text-gray-400 text-sm">Brand Identity</p>
-              </div>
-              <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=200&h=200&fit=crop" 
-                  alt="Logo Design Sample"
-                  className="w-full h-24 object-cover rounded-lg mb-3"
-                />
-                <p className="text-gray-400 text-sm">Modern Logos</p>
-              </div>
-              <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=200&h=200&fit=crop" 
-                  alt="Logo Design Sample"
-                  className="w-full h-24 object-cover rounded-lg mb-3"
-                />
-                <p className="text-gray-400 text-sm">Creative Concepts</p>
-              </div>
-              <div className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=200&h=200&fit=crop" 
-                  alt="Logo Design Sample"
-                  className="w-full h-24 object-cover rounded-lg mb-3"
-                />
-                <p className="text-gray-400 text-sm">Typography</p>
-              </div>
-            </div>
-            <p className="text-gray-400">
-              Creating memorable brand identities that capture your vision and resonate with your audience
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
