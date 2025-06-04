@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Send, Heart, ExternalLink } from "lucide-react";
 
 export const Footer = () => {
@@ -59,6 +58,18 @@ export const Footer = () => {
               <p className="text-gray-400 text-sm">Remote & Freelance</p>
             </div>
           </div>
+
+          {/* Start Your Project Button */}
+          <button 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-orange-500 
+                       text-white px-8 py-4 rounded-full font-semibold text-lg
+                       hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30
+                       hover:shadow-primary/50 group"
+          >
+            <Send className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+            Start Your Project
+          </button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">

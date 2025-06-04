@@ -1,4 +1,3 @@
-
 import { Quote, Star, Heart, ThumbsUp } from "lucide-react";
 
 export const Testimonials = () => {
@@ -130,7 +129,7 @@ export const Testimonials = () => {
           ))}
         </div>
 
-        {/* Call to action */}
+        {/* Call to action with icon moved to front */}
         <div className="text-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
           <div className="glass-morphism rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="font-title font-bold text-2xl lg:text-3xl text-white mb-4">
@@ -139,10 +138,13 @@ export const Testimonials = () => {
             <p className="text-gray-400 mb-6">Let's create something amazing together</p>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary group"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-orange-500 
+                         text-white px-8 py-4 rounded-full font-semibold text-lg
+                         hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30
+                         hover:shadow-primary/50 group"
             >
               <Heart className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              Start Your Project
+              Let's Create Together
             </button>
           </div>
         </div>
