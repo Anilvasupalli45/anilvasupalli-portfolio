@@ -85,7 +85,10 @@ export const Skills = () => {
           <p className="text-gray-400 text-lg mb-6">Ready to bring your creative vision to life?</p>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary group"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-orange-500 
+                       text-white px-8 py-4 rounded-full font-semibold text-lg
+                       hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30
+                       hover:shadow-primary/50 group"
           >
             <Star className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             Let's Create Together

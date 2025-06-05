@@ -21,8 +21,7 @@ export const Tools = () => {
     },
     { 
       name: "Canva", 
-      icon: Palette,
-      color: "text-purple-400"
+      logo: "https://i.ibb.co/mnXYKpJ/canva-icon.png"
     }
   ];
 
@@ -67,15 +66,11 @@ export const Tools = () => {
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-white/10 
                                 flex items-center justify-center mb-4 group-hover:scale-110 
                                 transition-transform duration-500 overflow-hidden">
-                  {tool.logo ? (
-                    <img 
-                      src={tool.logo} 
-                      alt={tool.name}
-                      className="w-12 h-12 object-contain"
-                    />
-                  ) : tool.icon ? (
-                    <tool.icon className={`w-12 h-12 ${tool.color || 'text-white'}`} />
-                  ) : null}
+                  <img 
+                    src={tool.logo} 
+                    alt={tool.name}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
                 <div className="absolute inset-0 w-16 h-16 mx-auto rounded-2xl 
                                 bg-orange-500/20 blur-xl opacity-50
