@@ -1,4 +1,6 @@
+
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ExternalLink, Eye, Palette, Video, Star, Sparkles, ArrowRight } from "lucide-react";
 
 export const Portfolio = () => {
@@ -70,57 +72,62 @@ export const Portfolio = () => {
             const Icon = category.icon;
             
             return (
-              <div
+              <Link
                 key={category.title}
-                className="card-hover glass-morphism rounded-3xl overflow-hidden border border-gray-800 
-                           group glow-effect transform-gpu animate-scale-in relative"
-                style={{ animationDelay: `${index * 0.15}s` }}
+                to={`/projects?category=${encodeURIComponent(category.title)}`}
+                className="block"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.title}
-                    className="w-full h-full object-cover transition-transform duration-700 
-                               group-hover:scale-110 transform-gpu"
-                  />
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} 
-                                  opacity-30 group-hover:opacity-50 transition-opacity duration-500`}></div>
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-500"></div>
-                  
-                  {/* Enhanced icon overlay */}
-                  <div className="absolute top-4 right-4 w-14 h-14 bg-black/60 backdrop-blur-sm 
-                                  rounded-2xl flex items-center justify-center opacity-0 
-                                  group-hover:opacity-100 transition-all duration-500 
-                                  transform translate-y-2 group-hover:translate-y-0">
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
+                <div
+                  className="card-hover glass-morphism rounded-3xl overflow-hidden border border-gray-800 
+                             group glow-effect transform-gpu animate-scale-in relative"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={category.image}
+                      alt={category.title}
+                      className="w-full h-full object-cover transition-transform duration-700 
+                                 group-hover:scale-110 transform-gpu"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} 
+                                    opacity-30 group-hover:opacity-50 transition-opacity duration-500`}></div>
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-500"></div>
+                    
+                    {/* Enhanced icon overlay */}
+                    <div className="absolute top-4 right-4 w-14 h-14 bg-black/60 backdrop-blur-sm 
+                                    rounded-2xl flex items-center justify-center opacity-0 
+                                    group-hover:opacity-100 transition-all duration-500 
+                                    transform translate-y-2 group-hover:translate-y-0">
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
 
-                  {/* Project count badge */}
-                  <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm 
-                                  rounded-full px-4 py-2 opacity-0 group-hover:opacity-100 
-                                  transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                    <span className="text-white text-sm font-medium">{category.projects}</span>
+                    {/* Project count badge */}
+                    <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm 
+                                    rounded-full px-4 py-2 opacity-0 group-hover:opacity-100 
+                                    transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                      <span className="text-white text-sm font-medium">{category.projects}</span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="p-8">
-                  <h3 className="font-heading font-semibold text-xl text-white mb-4 
-                                 group-hover:text-primary transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                  <p className="font-body text-gray-400 mb-6 leading-relaxed text-sm">
-                    {category.description}
-                  </p>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="w-12 h-1 bg-gradient-to-r from-primary to-orange-500 rounded-full 
-                                    opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-primary 
-                                           transition-colors duration-300 transform 
-                                           group-hover:translate-x-1" />
+                  <div className="p-8">
+                    <h3 className="font-heading font-semibold text-xl text-white mb-4 
+                                   group-hover:text-primary transition-colors duration-300">
+                      {category.title}
+                    </h3>
+                    <p className="font-body text-gray-400 mb-6 leading-relaxed text-sm">
+                      {category.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="w-12 h-1 bg-gradient-to-r from-primary to-orange-500 rounded-full 
+                                      opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-primary 
+                                             transition-colors duration-300 transform 
+                                             group-hover:translate-x-1" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -147,19 +154,28 @@ export const Portfolio = () => {
                 project breakdowns, and behind-the-scenes insights
               </p>
               
-              <a
-                href="https://www.behance.net/anilvasupalli"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Button className="btn-primary text-xl lg:text-2xl px-16 py-8 group animate-glow-pulse 
-                                   rounded-2xl shadow-2xl shadow-primary/40">
-                  <ExternalLink className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
-                  Explore Full Portfolio on Behance
-                  <Star className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
-                </Button>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a
+                  href="https://www.behance.net/anilvasupalli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button className="btn-primary text-xl lg:text-2xl px-16 py-8 group animate-glow-pulse 
+                                     rounded-2xl shadow-2xl shadow-primary/40">
+                    <ExternalLink className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                    Explore Full Portfolio on Behance
+                    <Star className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                  </Button>
+                </a>
+                
+                <Link to="/projects">
+                  <Button className="btn-secondary text-lg px-12 py-6 group">
+                    <Eye className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+                    View All Projects
+                  </Button>
+                </Link>
+              </div>
               
               <div className="mt-8 flex items-center justify-center gap-8 text-gray-500">
                 <div className="flex items-center gap-2">
