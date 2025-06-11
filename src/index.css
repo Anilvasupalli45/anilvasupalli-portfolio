@@ -120,6 +120,10 @@
   .floating-animation {
     @apply animate-[float_6s_ease-in-out_infinite];
   }
+
+  .whatsapp-float {
+    @apply fixed bottom-5 right-5 z-[999] hover:scale-110 transition-transform duration-300;
+  }
 }
 
 @layer utilities {
