@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Eye, X } from "lucide-react";
+import { ArrowLeft, Eye } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -24,153 +24,129 @@ const Projects = () => {
     "Social Media Design": [
       {
         id: 1,
-        title: "Instagram Campaign Series",
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-        description: "Modern social media designs for lifestyle brand"
+        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+        alt: "Instagram Campaign Series"
       },
       {
         id: 2,
-        title: "Facebook Ad Templates",
-        image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=600&h=400&fit=crop",
-        description: "Eye-catching promotional graphics"
+        image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=600&fit=crop",
+        alt: "Facebook Ad Templates"
       },
       {
         id: 3,
-        title: "Story Templates Collection",
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop",
-        description: "Interactive Instagram story designs"
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop",
+        alt: "Story Templates Collection"
       },
       {
         id: 4,
-        title: "Product Showcase Posts",
-        image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-        description: "E-commerce social media graphics"
+        image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+        alt: "Product Showcase Posts"
       },
       {
         id: 5,
-        title: "Event Promotion Graphics",
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop",
-        description: "Dynamic event marketing materials"
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
+        alt: "Event Promotion Graphics"
       },
       {
         id: 6,
-        title: "Brand Awareness Campaign",
-        image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&h=400&fit=crop",
-        description: "Cohesive brand storytelling visuals"
+        image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop",
+        alt: "Brand Awareness Campaign"
       }
     ],
     "Branding & Identity": [
       {
         id: 7,
-        title: "Tech Startup Brand Identity",
-        image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&h=400&fit=crop",
-        description: "Complete brand system for SaaS company"
+        image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
+        alt: "Tech Startup Brand Identity"
       },
       {
         id: 8,
-        title: "Restaurant Brand Package",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-        description: "Menu design and brand guidelines"
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        alt: "Restaurant Brand Package"
       },
       {
         id: 9,
-        title: "Fashion Brand Identity",
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-        description: "Luxury fashion brand development"
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+        alt: "Fashion Brand Identity"
       },
       {
         id: 10,
-        title: "Corporate Rebranding",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-        description: "Modern corporate identity refresh"
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+        alt: "Corporate Rebranding"
       },
       {
         id: 11,
-        title: "Eco-Friendly Brand",
-        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop",
-        description: "Sustainable brand identity design"
+        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop",
+        alt: "Eco-Friendly Brand"
       },
       {
         id: 12,
-        title: "Healthcare Brand System",
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
-        description: "Medical practice branding package"
+        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+        alt: "Healthcare Brand System"
       }
     ],
     "Video & Motion": [
       {
         id: 13,
-        title: "Product Launch Video",
-        image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
-        description: "Dynamic product reveal animation"
+        image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=600&fit=crop",
+        alt: "Product Launch Video"
       },
       {
         id: 14,
-        title: "Corporate Explainer",
-        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
-        description: "Animated business process video"
+        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
+        alt: "Corporate Explainer"
       },
       {
         id: 15,
-        title: "Social Media Video Ads",
-        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-        description: "Short-form promotional content"
+        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
+        alt: "Social Media Video Ads"
       },
       {
         id: 16,
-        title: "Motion Graphics Package",
-        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-        description: "Animated logo and transitions"
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
+        alt: "Motion Graphics Package"
       },
       {
         id: 17,
-        title: "Event Highlight Reel",
-        image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
-        description: "Professional event documentation"
+        image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
+        alt: "Event Highlight Reel"
       },
       {
         id: 18,
-        title: "Educational Video Series",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-        description: "Engaging tutorial animations"
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+        alt: "Educational Video Series"
       }
     ],
     "Logo Design": [
       {
         id: 19,
-        title: "Minimalist Tech Logo",
-        image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=600&h=400&fit=crop",
-        description: "Clean geometric technology symbol"
+        image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=800&h=600&fit=crop",
+        alt: "Minimalist Tech Logo"
       },
       {
         id: 20,
-        title: "Restaurant Logo Collection",
-        image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&h=400&fit=crop",
-        description: "Food & beverage brand marks"
+        image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
+        alt: "Restaurant Logo Collection"
       },
       {
         id: 21,
-        title: "Fitness Brand Logos",
-        image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=600&h=400&fit=crop",
-        description: "Dynamic health & wellness designs"
+        image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=600&fit=crop",
+        alt: "Fitness Brand Logos"
       },
       {
         id: 22,
-        title: "Creative Agency Marks",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-        description: "Artistic and innovative symbols"
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
+        alt: "Creative Agency Marks"
       },
       {
         id: 23,
-        title: "E-commerce Logo Suite",
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop",
-        description: "Online retail brand identities"
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
+        alt: "E-commerce Logo Suite"
       },
       {
         id: 24,
-        title: "Professional Service Logos",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-        description: "Corporate and consulting marks"
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+        alt: "Professional Service Logos"
       }
     ]
   };
@@ -192,7 +168,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-dark">
+    <div className="min-h-screen bg-[#121212]">
       <Navigation />
       
       {/* Header Section */}
@@ -207,16 +183,16 @@ const Projects = () => {
           <div className="text-center mb-16 animate-slide-up">
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3 mb-8">
               <Eye className="w-5 h-5 text-primary" />
-              <span className="text-primary font-medium">Featured Projects</span>
+              <span className="text-primary font-medium">Portfolio Gallery</span>
             </div>
 
             <h1 className="font-title font-bold text-5xl md:text-6xl lg:text-7xl mb-8">
-              <span className="text-white">My</span>{" "}
-              <span className="text-gradient">Creative Work</span>
+              <span className="text-white">Creative</span>{" "}
+              <span className="text-gradient">Gallery</span>
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-8"></div>
             <p className="font-body text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Explore detailed galleries of my work across different creative disciplines
+              Explore my creative work through visual storytelling
             </p>
 
             <div className="mt-12">
@@ -259,78 +235,42 @@ const Projects = () => {
       {/* Gallery Section */}
       <section id="gallery-section" className="section-padding">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-semibold text-3xl lg:text-4xl text-white mb-4">
-              {activeCategory}
-            </h2>
-            <p className="text-gray-400 text-lg">
-              {currentProjects.length} projects showcasing my expertise
-            </p>
-          </div>
-
-          {/* Image Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Clean Image Gallery - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {currentProjects.map((project, index) => (
               <Dialog key={project.id}>
                 <DialogTrigger asChild>
-                  <article
-                    className="card-hover glass-morphism rounded-2xl overflow-hidden border border-gray-800 
-                               group glow-effect transform-gpu cursor-pointer animate-scale-in"
+                  <div
+                    className="group cursor-pointer animate-scale-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={() => setSelectedImage(project)}
                   >
-                    {/* Project Image */}
-                    <div className="relative h-72 overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
                       <img
                         src={project.image}
-                        alt={project.title}
+                        alt={project.alt}
                         className="w-full h-full object-cover transition-transform duration-700 
                                    group-hover:scale-110 transform-gpu"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 
-                                      opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
-                      
-                      {/* Hover overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 
-                                      group-hover:opacity-100 transition-all duration-500">
-                        <Button className="btn-primary group/btn transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                          <Eye className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
-                          View Full Size
-                          <ExternalLink className="w-4 h-4 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                        </Button>
-                      </div>
+                      {/* Subtle hover overlay */}
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 
+                                      transition-opacity duration-500"></div>
+                      {/* Soft glow effect on hover */}
+                      <div className="absolute inset-0 shadow-lg opacity-0 group-hover:opacity-100 
+                                      transition-opacity duration-500 rounded-2xl
+                                      shadow-primary/20 group-hover:shadow-primary/40"></div>
                     </div>
-                    
-                    {/* Project Info */}
-                    <div className="p-6">
-                      <h3 className="font-heading font-semibold text-xl text-white mb-3 
-                                     group-hover:text-primary transition-colors duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="font-body text-gray-400 leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-                  </article>
+                  </div>
                 </DialogTrigger>
 
                 {/* Lightbox Modal */}
-                <DialogContent className="max-w-4xl bg-dark-card border-gray-800 p-0">
+                <DialogContent className="max-w-6xl bg-[#121212] border-gray-800 p-4">
                   <div className="relative">
                     <img
                       src={project.image}
-                      alt={project.title}
-                      className="w-full h-auto rounded-lg"
+                      alt={project.alt}
+                      className="w-full h-auto rounded-lg max-h-[80vh] object-contain"
                     />
-                    <div className="p-6">
-                      <h3 className="font-heading font-semibold text-2xl text-white mb-3">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-400 text-lg">
-                        {project.description}
-                      </p>
-                    </div>
                   </div>
                 </DialogContent>
               </Dialog>
@@ -340,12 +280,9 @@ const Projects = () => {
           {/* Back to Categories */}
           <div className="text-center mt-16">
             <div className="glass-morphism rounded-2xl p-8 max-w-2xl mx-auto">
-              <h3 className="font-heading font-semibold text-2xl text-white mb-4">
+              <h3 className="font-heading font-semibold text-2xl text-white mb-6">
                 Explore More Categories
               </h3>
-              <p className="text-gray-400 mb-6">
-                Discover my work across different creative disciplines
-              </p>
               <div className="flex flex-wrap justify-center gap-3">
                 {categories.filter(cat => cat.name !== activeCategory).map((category) => (
                   <button
