@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -19,6 +18,11 @@ const Projects = () => {
     { name: "Video & Motion", emoji: "🎬" },
     { name: "Logo Design", emoji: "🔤" }
   ];
+
+  // Auto-scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const projectData = {
     "Social Media Design": [
@@ -160,11 +164,16 @@ const Projects = () => {
 
   const currentProjects = projectData[activeCategory as keyof typeof projectData] || [];
 
-  const scrollToGallery = () => {
-    const gallery = document.getElementById('gallery-section');
-    if (gallery) {
-      gallery.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCategoryChange = (categoryName: string) => {
+    setActiveCategory(categoryName);
+    // Auto-scroll to top when switching categories
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -213,10 +222,7 @@ const Projects = () => {
               return (
                 <button
                   key={category.name}
-                  onClick={() => {
-                    setActiveCategory(category.name);
-                    scrollToGallery();
-                  }}
+                  onClick={() => handleCategoryChange(category.name)}
                   className={`group flex items-center gap-3 px-8 py-4 rounded-full border transition-all duration-300 ${
                     isActive
                       ? 'bg-primary border-primary text-white shadow-lg shadow-primary/30 scale-105'
@@ -283,20 +289,23 @@ const Projects = () => {
               <h3 className="font-heading font-semibold text-2xl text-white mb-6">
                 Explore More Categories
               </h3>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
                 {categories.filter(cat => cat.name !== activeCategory).map((category) => (
                   <button
                     key={category.name}
-                    onClick={() => {
-                      setActiveCategory(category.name);
-                      scrollToGallery();
-                    }}
+                    onClick={() => handleCategoryChange(category.name)}
                     className="btn-secondary text-sm px-4 py-2"
                   >
                     {category.emoji} {category.name}
                   </button>
                 ))}
               </div>
+              <Button 
+                onClick={scrollToTop}
+                className="btn-primary mt-4"
+              >
+                Back to Top
+              </Button>
             </div>
           </div>
         </div>
