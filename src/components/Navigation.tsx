@@ -1,11 +1,14 @@
 
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Mail, FileText, Menu, X, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +20,48 @@ export const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    // Close mobile menu first
+    setIsMobileMenuOpen(false);
+    
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+      return;
+    }
+    
+    // Try to find and scroll to the element
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+      try {
+        element.scrollIntoView({ 
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+      } catch (error) {
+        console.warn(`Failed to scroll to section: ${sectionId}`, error);
+        // Fallback: scroll to top if element exists but scrollIntoView fails
+        window.scrollTo({ top: element.offsetTop - 100, behavior: "smooth" });
+      }
+    } else {
+      console.warn(`Section not found: ${sectionId}`);
+      // If section doesn't exist and we're on home page, just scroll to top
+      if (sectionId === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleNavigation = (sectionId: string) => {
+    // Always ensure we can handle navigation properly
+    try {
+      scrollToSection(sectionId);
+    } catch (error) {
+      console.error("Navigation error:", error);
+      // Fallback: just navigate to home if everything fails
+      if (location.pathname !== "/") {
+        navigate("/");
+      }
     }
   };
 
@@ -45,7 +86,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             {/* Enhanced Logo */}
             <button
-              onClick={() => scrollToSection("home")}
+              onClick={() => handleNavigation("home")}
               className="font-heading font-bold text-xl lg:text-2xl text-gradient 
                          hover:scale-105 transition-all duration-300 group flex items-center gap-2"
             >
@@ -58,7 +99,7 @@ export const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item.id)}
                   className="text-white hover:text-primary transition-all duration-300 
                              font-medium text-base relative group py-2"
                 >
@@ -149,7 +190,7 @@ export const Navigation = () => {
               {navItems.map((item, index) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item.id)}
                   className="block w-full text-left text-xl font-medium text-white 
                              hover:text-primary transition-all duration-300 
                              transform hover:translate-x-2 animate-slide-up relative group"

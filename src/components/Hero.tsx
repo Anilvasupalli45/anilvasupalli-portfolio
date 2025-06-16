@@ -1,24 +1,46 @@
 
 import { Download, Sparkles, Zap, ArrowDown } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+      return;
+    }
+
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
+      try {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+      } catch (error) {
+        console.warn(`Failed to scroll to section: ${sectionId}`, error);
+        // Fallback scroll method
+        window.scrollTo({ 
+          top: element.offsetTop - 100, 
+          behavior: "smooth" 
+        });
+      }
+    } else {
+      console.warn(`Section not found: ${sectionId}`);
     }
   };
 
+  const scrollToContact = () => {
+    scrollToSection("contact");
+  };
+
   const scrollToSkills = () => {
-    const element = document.getElementById("skills");
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
+    scrollToSection("skills");
   };
 
   return (
