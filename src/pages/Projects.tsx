@@ -28,33 +28,28 @@ const Projects = () => {
     "Social Media Design": [
       {
         id: 1,
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-        alt: "Instagram Campaign Series"
+        image: "/lovable-uploads/9892b099-ff84-4c4e-8c35-ae516c2c3972.png",
+        alt: "UPVC windows and doors social media campaign with professional interior design layouts"
       },
       {
         id: 2,
-        image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=600&fit=crop",
-        alt: "Facebook Ad Templates"
+        image: "/lovable-uploads/e6e9df65-2b1a-4d8d-aa8a-495cde660e7e.png",
+        alt: "Real estate social media designs for Sankar Nagar residential plots with creative visual storytelling"
       },
       {
         id: 3,
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop",
-        alt: "Story Templates Collection"
+        image: "/lovable-uploads/9c338136-019d-48ac-8414-f7bcd56fe99b.png",
+        alt: "Startup and business social media posts with modern design elements and engaging visuals"
       },
       {
         id: 4,
-        image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-        alt: "Product Showcase Posts"
+        image: "/lovable-uploads/2d9c45e0-b890-4336-ada3-47f51c454fd9.png",
+        alt: "Healthcare and medical social media campaign designs with professional branding"
       },
       {
         id: 5,
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
-        alt: "Event Promotion Graphics"
-      },
-      {
-        id: 6,
-        image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop",
-        alt: "Brand Awareness Campaign"
+        image: "/lovable-uploads/8d88883c-637f-46eb-a19e-7319029658c9.png",
+        alt: "Pest control service social media designs with bold red branding and clear messaging"
       }
     ],
     "Branding & Identity": [
