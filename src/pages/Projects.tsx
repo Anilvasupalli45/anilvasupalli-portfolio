@@ -119,13 +119,13 @@ const Projects = () => {
     "Logo Design": [
       {
         id: 19,
-        image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?w=800&h=600&fit=crop",
-        alt: "Minimalist Tech Logo"
+        image: "/lovable-uploads/fafb378e-98c4-4915-a1b4-d2f2c9a76f70.png",
+        alt: "Professional logo design collection featuring tech, transport, and business brands"
       },
       {
         id: 20,
-        image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&h=600&fit=crop",
-        alt: "Restaurant Logo Collection"
+        image: "/lovable-uploads/2c7f3b94-26cf-448d-a144-316d53a10ea6.png",
+        alt: "Creative logo portfolio showcasing diverse brand identities and design styles"
       },
       {
         id: 21,
