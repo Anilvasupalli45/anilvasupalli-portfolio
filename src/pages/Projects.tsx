@@ -55,33 +55,33 @@ const Projects = () => {
     "Branding & Identity": [
       {
         id: 7,
-        image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
-        alt: "Tech Startup Brand Identity"
+        image: "/lovable-uploads/a94d9fb4-9a35-43a4-80b7-87902b2c737b.png",
+        alt: "GreetHello brand identity featuring modern logo design with green color scheme"
       },
       {
         id: 8,
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        alt: "Restaurant Brand Package"
+        image: "/lovable-uploads/c5316c3c-b944-4a90-be60-218470316d31.png",
+        alt: "GreetHello brand application icons and mobile app interface design"
       },
       {
         id: 9,
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-        alt: "Fashion Brand Identity"
+        image: "/lovable-uploads/d9b778ad-49e5-4124-9f67-8618bca31c70.png",
+        alt: "GreetHello brand variations showing inverted and monochrome logo versions"
       },
       {
         id: 10,
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-        alt: "Corporate Rebranding"
+        image: "/lovable-uploads/c1374b52-b40d-4e84-a1e1-0092cc1d0a1a.png",
+        alt: "GreetHello brand guidelines including color palette and typography specifications"
       },
       {
         id: 11,
-        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop",
-        alt: "Eco-Friendly Brand"
+        image: "/lovable-uploads/948d841f-978a-4a7a-b3ff-cbafd13519ea.png",
+        alt: "GreetHello business card mockup showcasing professional brand application"
       },
       {
         id: 12,
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
-        alt: "Healthcare Brand System"
+        image: "/lovable-uploads/9c6c3f4e-e46e-416f-babe-bd0cd3b2e466.png",
+        alt: "GreetHello presentation slide design with thank you message"
       }
     ],
     "Video & Motion": [
