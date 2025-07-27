@@ -101,42 +101,6 @@ const Projects = () => {
         image: "/lovable-uploads/0a970095-a60b-4385-9343-03484fd1b9dd.png",
         alt: "Video portfolio showcase featuring diverse motion graphics and promotional content",
         link: "https://drive.google.com/drive/folders/1XMMJFv--DW0Kty5G4ELVOz83BTLzBKGC?usp=sharing"
-      },
-      {
-        id: 14,
-        image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=600&fit=crop",
-        alt: "Product Launch Video",
-        link: undefined
-      },
-      {
-        id: 15,
-        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
-        alt: "Corporate Explainer",
-        link: undefined
-      },
-      {
-        id: 16,
-        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
-        alt: "Social Media Video Ads",
-        link: undefined
-      },
-      {
-        id: 17,
-        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-        alt: "Motion Graphics Package",
-        link: undefined
-      },
-      {
-        id: 18,
-        image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
-        alt: "Event Highlight Reel",
-        link: undefined
-      },
-      {
-        id: 19,
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-        alt: "Educational Video Series",
-        link: undefined
       }
     ],
     "Logo Design": [
