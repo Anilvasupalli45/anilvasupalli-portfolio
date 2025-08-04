@@ -21,7 +21,7 @@ export const Tools = () => {
     },
     { 
       name: "Canva", 
-      logo: "https://i.ibb.co/mnXYKpJ/canva-icon.png"
+      logo: "/lovable-uploads/89b2fe7c-f69f-4938-8460-9c7bb08e7aa9.png"
     }
   ];
 
