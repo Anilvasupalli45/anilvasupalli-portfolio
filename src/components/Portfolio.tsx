@@ -32,7 +32,7 @@ export const Portfolio = () => {
     {
       title: "Logo Design",
       description: "Unique and memorable logo designs that capture brand essence and stand out in competitive markets.",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=300&fit=crop",
+      image: "/lovable-uploads/logo-design-preview.jpg",
       icon: Sparkles,
       color: "from-yellow-500 to-orange-500",
       projects: "40+ Logos"

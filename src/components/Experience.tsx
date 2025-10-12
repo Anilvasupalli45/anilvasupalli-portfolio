@@ -36,7 +36,7 @@ export const Experience = () => {
     {
       company: "Freelancer",
       role: "Graphic Designer",
-      duration: "May 2022 – July 2023",
+      duration: "June 2021 – May 2022",
       location: "Visakhapatnam",
       responsibilities: [
         "Conceptualize and create designs for various media, including print and digital.",

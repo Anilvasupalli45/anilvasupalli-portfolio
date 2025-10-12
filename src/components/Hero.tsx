@@ -92,7 +92,7 @@ export const Hero = () => {
           {/* Enhanced stats with better spacing */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mb-16 max-w-4xl mx-auto">
             {[{
-              number: "50+",
+              number: "25+",
               label: "Projects Delivered",
               delay: "0s",
               color: "from-primary to-orange-500"
