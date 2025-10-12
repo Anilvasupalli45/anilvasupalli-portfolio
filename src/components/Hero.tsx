@@ -97,7 +97,7 @@ export const Hero = () => {
               delay: "0s",
               color: "from-primary to-orange-500"
             }, {
-              number: "30+",
+              number: "20+",
               label: "Happy Clients",
               delay: "0.2s",
               color: "from-primary to-orange-500"

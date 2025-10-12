@@ -3,7 +3,7 @@ import { Quote, Star, Heart, ThumbsUp } from "lucide-react";
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Priya Sharma",
       role: "Marketing Director",
       company: "TechStart Inc.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
@@ -12,7 +12,7 @@ export const Testimonials = () => {
       highlight: "150% engagement increase"
     },
     {
-      name: "Michael Chen",
+      name: "Rajesh Kumar",
       role: "Content Creator",
       company: "Digital Media Co.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
@@ -21,7 +21,7 @@ export const Testimonials = () => {
       highlight: "Game-changing results"
     },
     {
-      name: "Emily Rodriguez",
+      name: "Sneha Patel",
       role: "Brand Manager",
       company: "Lifestyle Brand",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
