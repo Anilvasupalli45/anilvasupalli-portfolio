@@ -84,14 +84,13 @@ export const Testimonials = () => {
 
               <div className="flex items-center mb-8">
                 <div className="relative">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-20 h-20 rounded-full object-cover border-4 border-primary/30 
-                               group-hover:border-primary transition-colors duration-500"
-                  />
-                  <div className="absolute inset-0 w-20 h-20 rounded-full bg-primary/20 
-                                  group-hover:bg-primary/40 transition-colors duration-500"></div>
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-orange-500 
+                                  flex items-center justify-center border-4 border-primary/30 
+                                  group-hover:border-primary transition-colors duration-500">
+                    <span className="text-white text-3xl font-bold font-heading">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
                 </div>
                 <div className="ml-6">
                   <h3 className="font-heading font-semibold text-white text-xl mb-1 
