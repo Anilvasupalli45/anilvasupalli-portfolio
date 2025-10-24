@@ -3,9 +3,9 @@ import { Quote, Star, Heart, ThumbsUp } from "lucide-react";
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "Marketing Director",
-      company: "TechStart Inc.",
+      name: "Prasad Achary",
+      role: "Co-Founder",
+      company: "BrandioDigital",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
       rating: 5,
       text: "Anil's creative vision and attention to detail exceeded our expectations. The social media designs he created helped us increase engagement by 150%. His professionalism and timely delivery made the entire process seamless.",
