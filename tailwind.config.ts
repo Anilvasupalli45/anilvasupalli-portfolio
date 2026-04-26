@@ -25,9 +25,9 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#FF5A36',
-					foreground: '#ffffff',
-					dark: '#FF3D00'
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -54,16 +54,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				dark: {
-					DEFAULT: '#121212',
-					lighter: '#1e1e1e',
-					card: '#1a1a1a'
+					DEFAULT: 'hsl(var(--background))',
+					lighter: 'hsl(var(--secondary))',
+					card: 'hsl(var(--card))'
 				}
 			},
 			fontFamily: {
-				sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
-				heading: ['Nunito', 'ui-sans-serif', 'system-ui'],
-				body: ['Quicksand', 'ui-sans-serif', 'system-ui'],
-				title: ['Playfair Display', 'serif']
+				sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+				heading: ['Poppins', 'ui-sans-serif', 'system-ui'],
+				body: ['Inter', 'ui-sans-serif', 'system-ui'],
+				title: ['Poppins', 'ui-sans-serif', 'system-ui']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
