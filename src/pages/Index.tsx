@@ -1,10 +1,9 @@
-
 import { Hero } from "@/components/Hero";
-import { Experience } from "@/components/Experience";
-import { Tools } from "@/components/Tools";
-import { Skills } from "@/components/Skills";
+import { About } from "@/components/About";
+import { WhatIDo } from "@/components/WhatIDo";
 import { Portfolio } from "@/components/Portfolio";
-import { Testimonials } from "@/components/Testimonials";
+import { Showreel } from "@/components/Showreel";
+import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
@@ -14,14 +13,14 @@ const Index = () => {
   useHashNavigation();
 
   return (
-    <div className="min-h-screen bg-dark">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <Hero />
-      <Experience />
-      <Tools />
-      <Skills />
+      <About />
+      <WhatIDo />
       <Portfolio />
-      <Testimonials />
+      <Showreel />
+      <Experience />
       <Footer />
       <WhatsAppFloat />
     </div>
