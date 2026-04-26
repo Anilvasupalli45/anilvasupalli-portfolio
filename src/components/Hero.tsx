@@ -42,9 +42,8 @@ export const Hero = () => {
           </h2>
 
           <p className="text-base md:text-lg text-muted-foreground/90 max-w-xl leading-relaxed mb-10">
-            I craft impactful visuals — from brand identities and social campaigns
-            to motion graphics and edits that move people. 3+ years turning ideas
-            into clean, story-driven design.
+            I create impactful branding, social media creatives, and motion
+            content. 3+ years turning ideas into clean, story-driven design.
           </p>
 
           <div className="flex flex-wrap gap-4">
