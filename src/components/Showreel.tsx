@@ -4,18 +4,20 @@ export const Showreel = () => {
   return (
     <section id="showreel" className="section-padding">
       <div className="container-narrow">
-        <div className="flex flex-col items-start mb-12">
-          <span className="accent-pill mb-6">Video & Motion</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold max-w-2xl">
-            Showreel &amp; <span className="text-gradient">motion work</span>.
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-xl">
-            A glimpse of recent edits, reels and motion graphics — crafted for
-            brands, creators and campaigns.
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <span className="accent-pill mb-6">Showreel</span>
+            <h2 className="font-heading text-4xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
+              My <span className="text-gradient">video & motion</span> work.
+            </h2>
+          </div>
+          <p className="text-muted-foreground max-w-sm">
+            A short look at recent edits, reels and motion graphics I’ve
+            crafted over the last few years.
           </p>
         </div>
 
-        <div className="surface-card overflow-hidden aspect-video relative group">
+        <div className="surface-card overflow-hidden aspect-video relative group shadow-[var(--shadow-elegant)]">
           {/* Placeholder for embed — replace src with YouTube embed when ready */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--primary)/0.15),transparent_60%)]" />
           <img

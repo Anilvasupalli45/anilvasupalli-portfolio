@@ -11,12 +11,12 @@ export const Footer = () => {
           <div className="grid lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-7">
               <span className="accent-pill mb-6">Contact</span>
-              <h2 className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6">
+              <h2 className="font-heading text-4xl md:text-6xl font-bold leading-[1.05] mb-6">
                 Let’s work <span className="text-gradient">together</span>.
               </h2>
               <p className="text-lg text-muted-foreground max-w-lg mb-8">
-                Have a project in mind, or just want to say hi? I’d love to hear
-                about your idea and help bring it to life.
+                Have a project in mind, or hiring for a design role? I’d love
+                to hear from you.
               </p>
               <a
                 href="mailto:anilvasupalli@gmail.com"
