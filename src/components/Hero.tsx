@@ -33,17 +33,18 @@ export const Hero = () => {
             Available for freelance & full-time
           </span>
 
-          <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
-            Hi, I’m <span className="text-gradient">Anil Vasupalli</span>
+          <h1 className="font-heading font-bold text-6xl md:text-7xl lg:text-[5.5rem] leading-[1] tracking-tight mb-6 uppercase">
+            Anil<br />
+            <span className="text-gradient">Vasupalli</span>
           </h1>
 
-          <h2 className="font-heading text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
+          <h2 className="font-heading text-xl md:text-2xl text-foreground/90 mb-6 font-medium">
             Graphic Designer &amp; Video Editor
           </h2>
 
-          <p className="text-base md:text-lg text-muted-foreground/90 max-w-xl leading-relaxed mb-10">
-            I create impactful branding, social media creatives, and motion
-            content. 3+ years turning ideas into clean, story-driven design.
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10">
+            I create branding, social media creatives, and motion content
+            that engage and perform.
           </p>
 
           <div className="flex flex-wrap gap-4">
